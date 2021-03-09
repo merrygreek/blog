@@ -100,7 +100,7 @@ uglyURLs = false
     # 头像
     avatar = "/icons/apple-touch-icon.png"
     # 网站（默认值：baseURL）
-    website = "http://mycpl.cn:4000/"
+    website = "http://fuckyou.style:1314/"
     # 推特
     #twitter = "reuixiy"
 
@@ -187,13 +187,13 @@ uglyURLs = false
     [[menu.main]]
         url = "/LIFE/"
         name = "生活"
-        weight = 1
+        weight = 2
         pre = "internal"
         post = ""
     [[menu.main]]
         url = "/TECH/"
         name = "技术"
-        weight = 2
+        weight = 1
         pre = "internal"
         post = ""
     [[menu.main]]
