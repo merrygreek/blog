@@ -1,7 +1,7 @@
 ##########################################
 # 站点配置
 
-baseURL = "http://mycpl.cn/"
+baseURL = ""
 title = "思与生 "
 languageCode = "zh-CN"
 hasCJKLanguage = true
@@ -12,7 +12,7 @@ copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0
 theme = "meme"
 
 # `hugo new` 新建文章自动打开的文本编辑器
-newContentEditor = ""
+newContentEditor = "Typora"
 
 # i18n
 defaultContentLanguage = "zh"
@@ -187,7 +187,7 @@ uglyURLs = false
     [[menu.main]]
         url = "/LIFE/"
         name = "生活"
-        weight = 2
+        weight = 4
         pre = "internal"
         post = ""
     [[menu.main]]
@@ -196,6 +196,16 @@ uglyURLs = false
         weight = 1
         pre = "internal"
         post = ""
+    [[menu.main]]
+        url = "/BOOK/"
+        name = "摘书"
+        weight = 2
+        pre = "internal"
+    [[menu.main]]
+        url = "/ENGLISH/"
+        name = "英语"
+        weight = 3
+        pre = "internal"
     [[menu.main]]
         url = "/ABOUT/"
         name = "关于"
@@ -291,7 +301,7 @@ uglyURLs = false
 
     ## 「诗意人生」
     # 诗句，支持 Markdown
-    homePoetry = ["</br></br></br>我不知道樱花飘落的速度有多快。</br></br></br>就像我不知道自己该用怎样的速度走完这段路。</br></br></br>所以，只好用最快的速度。</br></br></br>我不能害怕，我配不上我受的苦难。</br></br></br>因为，从一开始我就知道。</br></br></br>我，从来就没有存在过。"]
+    homePoetry = ["</br>其实，睡你和被你睡是差不多的，无非是</br></br>两具肉体碰撞的力，无非是这力催开的花朵</br></br>无非是这花朵虚拟出的春天让我们误以为生命被重新打开</br></br>大半个中国，什么都在发生：火山在喷，河流在枯</br></br>一些不被关心的政治犯和流民</br></br>一路在枪口的麋鹿和丹顶鹤</br></br>我是穿过枪林弹雨去睡你</br></br>我是把无数的黑夜摁进一个黎明去睡你</br></br>我是无数个我奔跑成一个我去睡你</br></br>当然我也会被一些蝴蝶带入歧途</br></br>把一些赞美当成春天</br></br>把一个和横店类似的村庄当成故乡</br></br>而它们</br></br>都是我去睡你必不可少的理由</br>"]
     # 底部链接的内间距，单位：em
     homeLinksPadding = 1
 
