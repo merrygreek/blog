@@ -204,7 +204,7 @@ uglyURLs = false
         post = ""
     # [[menu.main]]
     #    weight = 6
-    #    identifier = "theme-switcher"
+    #    identifier = "search"
 
 
 

@@ -15,6 +15,9 @@ df.shape/.shape[0]
 df.columns
 df.types/s.type
 df.info()
+users.describe(include = "all") 
+df.index
+c.sort_values(['quantity'], ascending=False)
 df.head()
 df.tail()
 #索引标签
@@ -119,6 +122,11 @@ def my_exp(x,e):
     return x ** e
 df['a'].apply(my_exp,e=2)
 
+dollarizer = lambda x: float(x[1:-1])
+chipo.item_price = chipo.item_price.apply(dollarizer)
+
+revenue = (chipo['quantity']* chipo['item_price']).sum()
+print('Revenue was: $' + str(np.round(revenue,2)))
 #按列应用
 df.apply(func,axis=0)
 
@@ -164,5 +172,30 @@ te['2015']
 te['2010-10']
 #工作日
 pd.date_range(start='2010-1-1',end='2010-11-2',freq = 'B')
+
+prices = [float(value[1 : -1]) for value in chipo.item_price]
+chipo.item_price = prices
+chipo_filtered = chipo.drop_duplicates(['item_name','quantity','choice_description'])
+
+chipo.query('item_price > 10').item_name.nunique()
+chipo.sort_values(by = "item_name")
+chipo_drink_steak_bowl = chipo[(chipo.item_name == "Canned Soda") & (chipo.quantity > 1)]
+
+euro12[euro12.Team.str.startswith('G')]
+euro12.loc[euro12.Team.isin(['England', 'Italy', 'Russia']), ['Team','Shooting Accuracy']]
+army.set_index('origin', inplace=True)
+army.loc[["Maine", "Alaska"], ["deaths", "size", "deserters"]]
+
+army.iloc[4:, :]
+users.groupby('occupation').age.agg(['min', 'max'])
+occup_gender = gender_ocup.div(occup_count, level = "occupation") * 100
+
+regiment.groupby(['regiment', 'company']).preTestScore.mean().unstack()
+regiment.groupby(['company', 'regiment']).size()
+
+stud_alcoh.applymap(times10).head(10)
+crime.Year = pd.to_datetime(crime.Year, format='%Y')
+crimes = crime.resample('10AS').sum()
+crime.idxmax(0)
 ```
 
